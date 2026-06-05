@@ -1,5 +1,5 @@
 ## Biometric Attendance System Using Arduino Uno
-# Project URL : https://wokwi.com/projects/466003451731368961
+Project URL : https://wokwi.com/projects/466003451731368961
 # Project Overview
 
 This project presents a simulation-based Biometric Attendance System developed using Arduino Uno. Due to the absence of fingerprint sensor support in Wokwi, a push button is used to simulate biometric authentication. Attendance records are stored in EEPROM, ensuring data retention even after system reset.
