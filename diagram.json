@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Nithiya Monika",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -39, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 6.4,
+      "left": 274.4,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 265.4, "left": 144, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 169.2,
+      "left": 339.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 215.15,
+      "left": 259.2,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "lcd:GND", "uno:GND.1", "black", [] ],
+    [ "lcd:VCC", "uno:5V", "red", [] ],
+    [ "lcd:SDA", "uno:A4", "green", [] ],
+    [ "lcd:SCL", "uno:A5", "blue", [] ],
+    [ "btn:2.r", "uno:2", "green", [ "h19.4", "v-47.8", "h-4.1" ] ],
+    [ "led:A", "uno:8", "green", [ "v28.8", "h-211.2" ] ],
+    [ "uno:GND.2", "btn:1.l", "black", [ "v47.9", "h-72.9", "v28.8" ] ],
+    [ "uno:GND.3", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "led:C", "green", [ "v0", "h37.2" ] ]
+  ],
+  "dependencies": {}
+}
